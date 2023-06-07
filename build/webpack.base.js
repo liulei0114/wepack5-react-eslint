@@ -34,7 +34,7 @@ module.exports = {
       // less-loader 识别less，css-loader解析css，style-loader样式提取到头部
       {
         test: /.css$/, //匹配 css文件
-        include: [path.resolve(__dirname, '../src')],
+        include: [path.resolve(__dirname, '../src'), path.resolve(__dirname, '../node_modules/antd/dist/reset.css')],
         use: [isDev ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
       },
       {
@@ -42,7 +42,16 @@ module.exports = {
         include: [path.resolve(__dirname, '../src')],
         use: [
           isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader',
+          // 单独配置css-loader不然渲染出的样式名是hash：8
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                auto: true,
+                localIdentName: '[local]_[hash:base64:5]'
+              }
+            }
+          },
           'postcss-loader',
           'less-loader',
         ],
