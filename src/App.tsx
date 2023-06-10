@@ -11,7 +11,7 @@ function App() {
       <Test1 />
       <Tip2 />
       <Button type='primary'>Button12222</Button>
-      nihao1
+      nihao
     </>
   );
 }
