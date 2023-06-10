@@ -7,10 +7,10 @@ import Tip2 from './components/Tip2';
 function App() {
   return (
     <>
-      <span className={styles['font-color']}>通过less module 修改颜色111112222</span>
+      <span className={styles['font-color']}>通过less module 修改颜色11111</span>
       <Test1 />
       <Tip2 />
-      <Button type='primary'>Button12222</Button>
+      <Button type='primary'>Button1</Button>
       nihao1
     </>
   );
