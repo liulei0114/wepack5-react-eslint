@@ -11,6 +11,7 @@ function App() {
       <Test1 />
       <Tip2 />
       <Button type='primary'>Button1</Button>
+      nihao
     </>
   );
 }
