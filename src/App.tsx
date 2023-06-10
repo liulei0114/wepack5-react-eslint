@@ -10,7 +10,7 @@ function App() {
       <span className={styles['font-color']}>通过less module 修改颜色11111</span>
       <Test1 />
       <Tip2 />
-      <Button type='primary'>Button</Button>
+      <Button type='primary'>Button1</Button>
     </>
   );
 }
