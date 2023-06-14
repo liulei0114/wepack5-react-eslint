@@ -1,16 +1,50 @@
-import React from 'react';
-import styles from './app.module.less';
-import Test1 from './components/Test1';
-import { Button } from 'antd';
-import Tip2 from './components/Tip2';
+import React, { useState } from 'react';
+import { Button, ConfigProvider, Divider, Tag } from 'antd';
+import ButtonA from './components/ButtonA';
+import './btn.css';
 
 function App() {
+  const [size, setSize] = useState(14);
+
   return (
     <>
-      <span className={styles['font-color']}>通过less module 修改颜色</span>
-      <Test1 />
-      <Tip2 />
-      <Button type='primary'>Button</Button>
+      {/* <span className={styles['font-color']}>通过less module 修改颜色</span> */}
+      {/* <Test1 /> */}
+      {/* <Tip2 /> */}
+      <Button
+        type='primary'
+        onClick={() => {
+          setSize(size + 3);
+        }}
+      >
+        +3 Button【{size}】
+      </Button>
+      <Button
+        onClick={() => {
+          setSize(size - 3);
+        }}
+      >
+        -3 Button【{size}】
+      </Button>
+      <br />
+      {/* <ButtonA>Default</ButtonA> */}
+      {/* <ButtonA className='btn-override'>Override By ClassName</ButtonA> */}
+      <ConfigProvider
+        theme={{
+          token: {
+            mySize: size
+          }
+        }}
+      >
+        <ButtonA>Override By ConfigProvider</ButtonA>
+      </ConfigProvider>
+      <span className='text-btn'>对比textBtn</span>
+      <div style={{ marginTop: '10px' }}>
+        <Tag color='magenta'>magenta</Tag>
+      </div>
+      <Divider orientation={'left'}>
+        Test
+      </Divider>
     </>
   );
 }
