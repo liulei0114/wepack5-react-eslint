@@ -12,7 +12,7 @@ interface ButtonAProps extends ButtonProps {
 
 const ButtonA: FC<ButtonAProps> = ({ className, ...restProps }: ButtonAProps) => {
   const prefixCls = 'test-btn';
-  // 通用框架
+  // 通用样式
   const genSharedButtonStyle = (prefixCls: string, token: GlobalToken): CSSInterpolation => ({
     [`.${prefixCls}`]: {
       fontSize: token.mySize
