@@ -14,17 +14,17 @@ function App() {
       <Button
         type='primary'
         onClick={() => {
-          setSize(size + 3);
+          setSize(size + 2);
         }}
       >
-        +3 Button【{size}】
+        +2 Button【{size}】
       </Button>
       <Button
         onClick={() => {
-          setSize(size - 3);
+          setSize(size - 2);
         }}
       >
-        -3 Button【{size}】
+        -2 Button【{size}】
       </Button>
       <br />
       {/* <ButtonA>Default</ButtonA> */}
@@ -38,7 +38,7 @@ function App() {
       >
         <ButtonA>Override By ConfigProvider</ButtonA>
       </ConfigProvider>
-      <span className='text-btn'>对比textBtn</span>
+      <span className='test-btn'>覆盖样式</span>
       <div style={{ marginTop: '10px' }}>
         <Tag color='magenta'>magenta</Tag>
       </div>
