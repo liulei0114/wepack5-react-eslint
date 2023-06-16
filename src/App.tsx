@@ -42,9 +42,7 @@ function App() {
       <div style={{ marginTop: '10px' }}>
         <Tag color='magenta'>magenta</Tag>
       </div>
-      <Divider orientation={'left'}>
-        Test
-      </Divider>
+      <Divider orientation={'left'}>Test</Divider>
     </>
   );
 }
