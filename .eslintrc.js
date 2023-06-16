@@ -18,6 +18,10 @@ module.exports = {
   plugins: ['react', '@typescript-eslint'],
   rules: {
     '@typescript-eslint/no-unused-vars': 'error',
+    "object-curly-newline": [2, {
+      "minProperties": 1,
+      "multiline": true,
+    }],
   },
   settings: {
     "react": {
